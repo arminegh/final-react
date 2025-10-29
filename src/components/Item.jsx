@@ -16,7 +16,7 @@ export const Item = ({ item }) => (
 			<Card.Text>Categoría: {item.categoryId}</Card.Text>
 			<Card.Text>{item.description}</Card.Text>
 			<Link to={`/item/${item.id}`}>
-				<Button variant="primary">Ver detalle</Button>
+				<Button variant="primary">Detalles</Button>
 			</Link>
 			<mark>Stock: {item.stock}</mark>
 		</Card.Body>
