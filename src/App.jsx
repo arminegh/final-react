@@ -7,8 +7,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { getItems } from './main'
-import { ItemListContainer } from './components/ItemListContainer'
 import Expassio from './components/Expassio'
+import { ItemListContainer } from './components/ItemListContainer'
+import { ItemDetailContainer } from './components/ItemDetailContainer'
+
+
 
 
 
@@ -26,6 +29,7 @@ function App() {
 			<Route path="/Expassio" element={<Expassio />} />	
 			<Route path="/" element={<ItemListContainer />} />	
 			<Route path="/category/:id" element={<ItemListContainer />} />	
+			<Route path="/item/:id" element={<ItemDetailContainer />} />
 
 
 			</Routes>
@@ -38,7 +42,7 @@ export default App
 
 /*
 	
-				<Route path="/products/:id" element={<ItemListDetail />} />
+				
 				
 				<Route path="/conocenos" element={<Conocenos />} />
 				<Route path="*" element={<Error404 />} /> 
