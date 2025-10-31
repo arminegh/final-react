@@ -13,21 +13,13 @@ export const ItemListContainer = ({ greeting }) => {
 		const db = getFirestore()
 
 		const refCollection = id
-			? query(
-					collection(db, "items"),
-					where("categoryId", "==", id)
-			  )
+			? query(collection(db, "items"),where("categoryId", "==", id))
 			: collection(db, "items")
 
 		getDocs(refCollection).then(snapshot => {
 			if (snapshot.size === 0) setList([])
 			else {
-				setList(
-					snapshot.docs.map(doc => ({
-						id: doc.id,
-						...doc.data(),
-					}))
-				)
+				setList(snapshot.docs.map(doc => ({id: doc.id, ...doc.data(),})))
 			}
 		})
 	}, [id])

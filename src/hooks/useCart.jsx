@@ -35,6 +35,6 @@ export const useCart = () => {
 
 	const clear = () => setProductosAgregados([])
 
-	return {productosAgregados, addItem, clear,deleteItem,
+	return {productosAgregados, addItem, clear, deleteItem
 	}
 }

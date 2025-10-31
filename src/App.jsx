@@ -6,17 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 //import { Error404 } from "./views/Error404"
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { getItems } from './main'
 import Expassio from './components/Expassio'
 import { ItemListContainer } from './components/ItemListContainer'
 import { ItemDetailContainer } from './components/ItemDetailContainer'
-
-
-
-
-
-
-
 
 function App() {
   

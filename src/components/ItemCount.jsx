@@ -16,43 +16,36 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 	}
 
 	return (
-		<section className="col-12 col-sm-6 col-md-3 mb-4">
+		<section className="col-12 col-sm-6 col-md-3 mb-4 mx-auto">
 			{stock > 0 ? (
 				<>
-					<InputGroup>
-						<Button
-							variant="primary"
-							onClick={handleIncreaseCount}
-						>
-							+
-						</Button>
-						<Form.Control
-							value={counter}
-							className="text-center"
-						/>
-						<Button
-							variant="primary"
-							onClick={handleDecreaseCount}
-						>
-							-
-						</Button>
+					<InputGroup >
+						<Button size="sm" variant="primary" onClick={handleIncreaseCount}>+</Button>
+						<Form.Control value={counter} className="text-center"/>
+						<Button size="sm" variant="primary" onClick={handleDecreaseCount}>-</Button>
 					</InputGroup>
 					{!!counter && (
-						<Button
-							variant="outline-primary"
-							className="mt-4"
-							onClick={() => onAdd(counter)}
-						>
-							Agregar al carrito
-						</Button>
+						<div className="d-grid gap-2">
+						<Button variant="outline-primary" className="mt-4" onClick={() => onAdd(counter)}>
+							Agregar al carrito </Button>
+						</div>
 					)}
 					<div className="mt-4">
-						Stock disponible: {stock - counter}
+						 Disponible: {stock - counter}
 					</div>
 				</>
-			) : (
+			) 
+			
+			
+			
+			: 
+			
+			
+			
+			
+			(
 				<>
-					<div className="mt-4">No hay stock</div>
+					<div className="mt-4">No hay disponibles</div>
 					<Link to="/">
 						<Button variant="outline-primary" className="mt-4">
 							Seguir comprando

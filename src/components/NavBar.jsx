@@ -15,7 +15,6 @@ export const NavBar = () => {
 
 	useEffect(() => {
 		const db = getFirestore()
-
 		const refCollection = collection(db, "items")
 
 		getDocs(refCollection).then(snapshot => {

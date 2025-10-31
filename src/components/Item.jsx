@@ -14,7 +14,7 @@ export const Item = ({ item }) => (
 		<Card.Body>
 			<Card.Title>{item.name}</Card.Title>
 			<Card.Text>Categoría: {item.categoryId}</Card.Text>
-			<Card.Text>{item.description}</Card.Text>
+			<Card.Text>{item.tittle}</Card.Text>
 			<Link to={`/item/${item.id}`}>
 				<Button variant="primary">Detalles</Button>
 			</Link>
@@ -22,3 +22,4 @@ export const Item = ({ item }) => (
 		</Card.Body>
 	</Card>
 )
+
