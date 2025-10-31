@@ -30,21 +30,11 @@ export const CartWidget = () => {
 		)
 
 	return (
-        !!totalQuantity() && (
+        
         <div className="areaCarrito" >
             <img className = "imagenBarra" src={carrito} alt="tu carrito de compras" />
             <span className="conteo">{totalQuantity()}</span>
-        </div>)
+        </div>
     )
 }
 
-
-/*
-  return (
-        !!totalQuantity() && (
-        <div className="areaCarrito" >
-            <img className = "imagenBarra" src={carrito} alt="tu carrito de compras" />
-            <span className="conteo">{totalQuantity}</span>
-        </div>)
-    )
-		*/

@@ -15,6 +15,8 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 		if (counter > 0) setCounter(counter - 1)
 	}
 
+
+	console.log("debo agregar: " + counter)
 	return (
 		<section className="col-12 col-sm-6 col-md-3 mb-4 mx-auto">
 			{stock > 0 ? (

@@ -1,8 +1,6 @@
 import { createContext, useState } from "react"
 
-import { useCart } from "../hooks/useCart"
-
-export const CartContext = createContext([])
+export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
 	const [productosAgregados, setProductosAgregados] = useState([])
@@ -14,11 +12,14 @@ export const CartProvider = ({ children }) => {
 			setProductosAgregados(prev => [...prev, { ...rest, quantity },])
 		else {
 			const actualizarProductos = productosAgregados.map (producto => {
-				if (producto.id === rest.id)
-					return {
-						...producto,quantity
+				if (producto.id === rest.id){
+					return {...producto, quantity: producto.quantity + quantity}
 				}
+				return producto
 			})
+			setProductosAgregados(actualizarProductos)
+
+
 		}
 	}
 	//const deleteItem = id => {...}
@@ -31,16 +32,11 @@ export const CartProvider = ({ children }) => {
 
 	const clear = () => setProductosAgregados([])
 
-
-	const cart = useCart()
-
-
-	const value = { productosAgregados, addItem, deleteItem, clear };
     
 
 	
 	return (
-		<CartContext.Provider value={cart}>
+		<CartContext.Provider value={{ productosAgregados, addItem, deleteItem, clear }}>
 			{children}
 		</CartContext.Provider>
 	)

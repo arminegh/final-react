@@ -46,12 +46,13 @@ export const NavBar = () => {
 
 
             {itemsMenu?.map(item => (
-						<NavLink key={item} to={`/category/${item}`}>
-							{item.toUpperCase()}
+						<NavLink className = 'nav-link' key={item} to={`/category/${item}`} >
+							{item}
 						</NavLink>
 					))}
 
-          <CartWidget />
+          
+		  <Nav.Link  href={`/carrito`}><CartWidget /></Nav.Link>
 
 
             

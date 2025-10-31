@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import Expassio from './components/Expassio'
 import { ItemListContainer } from './components/ItemListContainer'
 import { ItemDetailContainer } from './components/ItemDetailContainer'
+import { Cart } from './components/Cart'
 
 function App() {
   
@@ -22,7 +23,7 @@ function App() {
 			<Route path="/" element={<ItemListContainer />} />	
 			<Route path="/category/:id" element={<ItemListContainer />} />	
 			<Route path="/item/:id" element={<ItemDetailContainer />} />
-
+			<Route path="/carrito" element={<Cart />} />
 
 			</Routes>
 		</BrowserRouter>
