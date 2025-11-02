@@ -35,13 +35,13 @@ export const NavBar = () => {
     <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
      
       <Container>
-        <Navbar.Brand href={`/Expassio`}>Expassio</Navbar.Brand>
+
+		<NavLink className="navbar-brand nav-link" to="/Expassio">Expassio</NavLink>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-           
-		   
-		    <Nav.Link  href={`/`}>Inicio</Nav.Link>
+			<NavLink className="nav-link" to="/">Inicio</NavLink>
 
 
 
@@ -51,8 +51,8 @@ export const NavBar = () => {
 						</NavLink>
 					))}
 
-          
-		  <Nav.Link  href={`/carrito`}><CartWidget /></Nav.Link>
+          	<NavLink className="nav-link" to="/carrito"><CartWidget /></NavLink>
+
 
 
             

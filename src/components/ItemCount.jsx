@@ -36,16 +36,7 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 						 Disponible: {stock - counter}
 					</div>
 				</>
-			) 
-			
-			
-			
-			: 
-			
-			
-			
-			
-			(
+			) : (
 				<>
 					<div className="mt-4">No hay disponibles</div>
 					<Link to="/">

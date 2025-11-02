@@ -1,11 +1,21 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
 	const [productosAgregados, setProductosAgregados] = useState([])
 
+
+	useEffect(() => {
+    console.log("productosAgregados actualizado:", productosAgregados);
+}, [productosAgregados]);
+
+
+
 	const addItem = (producto, quantity) => {
+
+		console.log("esto voy a agregar:", producto, "cantidad:", quantity)
+
 		const { stock, ...rest } = producto
 		const alreadyExists = productosAgregados.some (producto => producto.id === rest.id)
 		if (!alreadyExists)

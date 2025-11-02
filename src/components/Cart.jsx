@@ -9,6 +9,11 @@ import { CartContext } from "../context/cartContext"
 
 		console.log("cartcontext " + CartContext)
 
+
+
+
+
+
 export const Cart = () => {
 	const [formValues, setFormValues] = useState({
 		name: "",
@@ -18,6 +23,12 @@ export const Cart = () => {
 		
 	const { productosAgregados, deleteItem, clear } =
 		useContext(CartContext)
+
+
+		console.log("Carrito en Cart.jsx:", productosAgregados)
+
+
+
 
 	const sendOrder = () => {
 		const order = {
