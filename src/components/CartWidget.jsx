@@ -1,9 +1,5 @@
 import { useContext } from "react"
-import { Link } from "react-router-dom"
-
 import { CartContext } from "../context/cartContext"
-import Badge from "react-bootstrap/Badge"
-import Button from "react-bootstrap/Button"
 import carrito from "../assets/carrito.svg"
 
 
