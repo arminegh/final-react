@@ -2,7 +2,7 @@
 
 Esta aplicación provee un espacio para que puedas poner a disposición de tus clientes varias opciones de personalización de productos. 
 
-## Instación
+## Instalación
 
 La versión de producción de esta aplicación ya la puedes encontrar aqui: https://final-react-rho-two.vercel.app/
 
